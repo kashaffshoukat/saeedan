@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+// import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import Router from "./routes";
 
 function App() {
@@ -8,9 +8,9 @@ function App() {
 
   return (
     <React.Fragment>
-      <ErrorBoundary>
-        <Router />
-      </ErrorBoundary>
+      {/* <ErrorBoundary> */}
+      <Router />
+      {/* </ErrorBoundary> */}
     </React.Fragment>
   );
 }
