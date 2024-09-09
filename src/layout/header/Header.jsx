@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
+import Button from "../../components/Button";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
-
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Team", href: "#team" },
-    { name: "Company", href: "#company" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Careers", href: "/careers" },
-    { name: "Blog", href: "#blog" },
+    { name: "Services", to: "/services" },
+    { name: "Team", to: "/team" },
+    { name: "Company", to: "/company" },
+    { name: "Portfolio", to: "/portfolio" },
+    { name: "Careers", to: "/careers" },
+    { name: "Blog", to: "/blog" },
   ];
 
   useEffect(() => {
@@ -34,13 +36,35 @@ const Header = () => {
     >
       <div className="container mx-auto flex justify-between items-center py-4">
         <div className="flex items-center space-x-2">
-          <img src="/assets/Logo.webp" alt="Logo" className="w-14" />
+          <img src="/assets/Logo.webp" alt="Logo" className="w-16" />
         </div>
 
-        <nav className="hidden md:flex space-x-6">
+        <div className="flex items-center md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none"
+          >
+            {isMenuOpen ? (
+              <GiCancel size={24} />
+            ) : (
+              <GiHamburgerMenu size={24} />
+            )}
+          </button>
+        </div>
+
+        <nav
+          className={`md:flex ${
+            isMenuOpen ? "flex" : "hidden"
+          } space-x-6 md:space-x-8`}
+        >
           {navLinks.map((link, index) => (
-            <Link key={index} to={link.href} className="hover:text-gray-300">
+            <Link
+              key={index}
+              to={link.to}
+              className="relative group text-xl font-semibold hover:text-yellow-400 transition duration-300"
+            >
               {link.name}
+              <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
         </nav>
