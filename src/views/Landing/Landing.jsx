@@ -7,6 +7,9 @@ import Button from "../../components/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Benefits from "./Benefits";
 import Service from "./Service";
+import Testimonial from "./Testimonial";
+import TechnologyStack from "./TechnologyStack";
+import FAQs from "./FAQS";
 
 const Landing = () => {
   const webDevStacks = [
@@ -22,13 +25,13 @@ const Landing = () => {
         <section className="bg-white">
           <div className="mx-auto flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 mb-10 lg:mb-0 flex flex-col items-start justify-start">
-              <h1 className="text-5xl text-blue-700 mb-4 font-bold">
+              <h1 className="text-4xl text-primary mb-4 font-bold">
                 Web and App Development
               </h1>
-              <h2 className="text-5xl mb-6 font-bold">Services Agency</h2>
+              <h2 className="text-3xl mb-6 font-bold">Services Agency</h2>
               <p className="text-3xl text-gray-800 mb-6">
                 Saeedan Technology -{" "}
-                <span className="text-blue-500">
+                <span className="text-primary">
                   Custom Software Development Company
                 </span>
               </p>
@@ -55,6 +58,9 @@ const Landing = () => {
           </div>
           <Benefits />
           <Service />
+          <Testimonial />
+          <TechnologyStack />
+          <FAQs />
         </section>
       </div>
     </>

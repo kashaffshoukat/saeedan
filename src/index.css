@@ -4,6 +4,10 @@ body {
     @apply font-sans;
 } */
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* styles.css or any custom CSS file */
