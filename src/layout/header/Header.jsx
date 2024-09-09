@@ -15,8 +15,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-blue-900 text-white shadow-lg">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-0">
+    <header className="bg-primary text-white">
+      <div className="container mx-auto flex justify-between items-center py-4">
         <div className="flex items-center space-x-2">
           <img src="/assets/Logo.webp" alt="Logo" className="w-16" />
         </div>

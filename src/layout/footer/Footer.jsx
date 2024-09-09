@@ -1,9 +1,10 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
-
+import { IoCall } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 const Footer = () => {
   return (
-    <footer className="bg-blue-800  text-white">
+    <footer className="bg-primary  text-white">
       <div className="flex items-center justify-between p-6">
         <img src="/assets/Logo.webp" alt="Logo" className="w-14 " />
         <div className="flex items-center">
@@ -27,12 +28,19 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Have a Question?</h3>
           <div className="flex items-center mb-2">
-            <span className="material-icons">phone</span>
-            <span className="ml-2">+92 300 7861566</span>
+            <a href="tel:+923007861566" className="flex items-center">
+              <IoCall className="cursor-pointer" />
+              <span className="ml-2">+92 300 7861566</span>
+            </a>
           </div>
           <div className="flex items-center">
-            <span className="material-icons">email</span>
-            <span className="ml-2">contact@saeedantechpvt.com</span>
+            <a
+              href="mailto:contact@saeedantechpvt.com"
+              className="flex items-center"
+            >
+              <MdEmail className="cursor-pointer" />
+              <span className="ml-2">contact@saeedantechpvt.com</span>
+            </a>
           </div>
         </div>
 
