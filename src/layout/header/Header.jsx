@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi"; // Import icons from react-icons
+import Button from "../../components/Button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,12 +44,15 @@ const Header = () => {
           ))}
         </nav>
 
-        <a
+        {/* <a
           href="#contact"
           className="hidden md:block text-blue-900 bg-white hover:bg-blue-100 border border-blue-900 px-6 py-2 rounded-md transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
         >
           Contact Us
-        </a>
+        </a> */}
+        <div>
+          <Button>Contact Us</Button>
+        </div>
       </div>
     </header>
   );
