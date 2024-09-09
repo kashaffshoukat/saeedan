@@ -13,13 +13,13 @@ const Landing = () => {
     "Tailwind CSS",
   ];
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-5">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
-          <h1 className="text-4xl font-bold text-blue-700 mb-4">
+          <h1 className="text-5xl text-blue-700 mb-4 font-bold">
             Web and App Development
           </h1>
-          <h2 className="text-3xl font-semibold mb-6">Services Agency</h2>
+          <h2 className="text-5xl mb-6 font-bold">Services Agency</h2>
           <p className="text-lg text-gray-800 mb-6">
             Saeedan Technology -{" "}
             <span className="text-blue-500">

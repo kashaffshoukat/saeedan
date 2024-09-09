@@ -1,35 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { GiHamburgerMenu, GiCancel } from "react-icons/gi"; // Import icons from react-icons
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Team", href: "#team" },
-    { name: "Company", href: "#company" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Careers", href: "#careers" },
-    { name: "Blog", href: "#blog" },
+    { name: "Services", to: "/services" },
+    { name: "Team", to: "/team" },
+    { name: "Company", to: "/company" },
+    { name: "Portfolio", to: "/portfolio" },
+    { name: "Careers", to: "/careers" },
+    { name: "Blog", to: "/blog" },
   ];
 
   return (
-    <header className="bg-blue-800 text-white">
-      <div className="container mx-auto flex justify-between items-center py-4">
+    <header className="bg-blue-900 text-white shadow-lg">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-0">
         <div className="flex items-center space-x-2">
-          <img src="/assets/Logo.webp" alt="Logo" className="w-14 " />
+          <img src="/assets/Logo.webp" alt="Logo" className="w-16" />
         </div>
 
-        <nav className="hidden md:flex space-x-6">
+        <div className="flex items-center md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none"
+          >
+            {isMenuOpen ? <GiCancel size={24} /> : <GiHamburgerMenu size={24} />}
+          </button>
+        </div>
+
+        <nav className={`md:flex ${isMenuOpen ? "flex" : "hidden"} space-x-6 md:space-x-8`}>
           {navLinks.map((link, index) => (
-            <a key={index} href={link.href} className="hover:text-gray-300">
+            <Link
+              key={index}
+              to={link.to}
+              className="relative group text-xl font-semibold hover:text-yellow-400 transition duration-300"
+            >
               {link.name}
-            </a>
+              <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </Link>
           ))}
         </nav>
 
         <a
           href="#contact"
-          className="text-blue-800 bg-white hover:bg-gray-100 border border-white px-4 py-2 rounded-md transition duration-300"
+          className="hidden md:block text-blue-900 bg-white hover:bg-blue-100 border border-blue-900 px-6 py-2 rounded-md transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
         >
-          Contact us
+          Contact Us
         </a>
       </div>
     </header>
