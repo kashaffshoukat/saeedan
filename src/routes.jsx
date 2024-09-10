@@ -6,6 +6,8 @@ import Careers from "./views/Careers/Careers";
 import JobApplication from "./views/Careers/JobApplication";
 import ContactUs from "./views/ContactUs/ContactUs";
 import Services from "./views/Services/Services";
+import Blogs from "./views/Blogs/Blogs";
+import WebDevelopmentServices from "./views/WebDevelopmentServices/WebDevelopmentServices";
 
 export default function Router() {
   let element = useRoutes([
@@ -15,6 +17,8 @@ export default function Router() {
       children: [
         { path: "/", element: <Landing /> },
         { path: "/team", element: <Team /> },
+        {path: "/blog", element: <Blogs />},
+        {path:"/WebDevelopmentServices", element:<WebDevelopmentServices/>},
         {
           path: "/",
           element: <Landing />,

@@ -15,6 +15,8 @@ const Header = () => {
     { name: "Portfolio", to: "/portfolio" },
     { name: "Careers", to: "/careers" },
     { name: "Blog", to: "/blog" },
+    { name: "WEBS SERVICES", to: "/WebDevelopmentServices" },
+
   ];
 
   useEffect(() => {

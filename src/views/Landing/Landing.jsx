@@ -43,7 +43,6 @@ const Landing = () => {
                 user-friendly apps. Click now to turn your dreams into reality!
               </p>
               <div>
-
                 <Button icon={<FaArrowRightLong />}>Schedule Free Consultation</Button>
               </div>
             </div>
