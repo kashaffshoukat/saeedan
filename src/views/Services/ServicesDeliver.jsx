@@ -1,4 +1,3 @@
-import React from "react";
 import { FaPhp } from "react-icons/fa";
 import { FaLaravel } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
@@ -16,6 +15,20 @@ import { FaShopify } from "react-icons/fa";
 import { SiBotblecms } from "react-icons/si";
 import { FaWix } from "react-icons/fa";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import { TbSeo } from "react-icons/tb";
+import { TbSocial } from "react-icons/tb";
+import { RiAdvertisementLine } from "react-icons/ri";
+import { GrDocumentPerformance } from "react-icons/gr";
+import { RiTwitterXLine } from "react-icons/ri";
+import { PiGitBranchLight } from "react-icons/pi";
+import { FaBriefcase } from "react-icons/fa6";
+import { CiMicrochip } from "react-icons/ci";
+import { SlChemistry } from "react-icons/sl";
+import { SiCivicrm } from "react-icons/si";
+import { CgWebsite } from "react-icons/cg";
+import { FaMobileAlt } from "react-icons/fa";
+import { FaRegPlusSquare } from "react-icons/fa";
+import { FaPencilRuler } from "react-icons/fa";
 
 const ServiceItem = ({ text }) => (
   <div className="text-center">
@@ -44,6 +57,29 @@ const cms = [
   { name: "Shopify", icon: <FaShopify size={65} /> },
   { name: "Custom Css", icon: <SiBotblecms size={65} /> },
   { name: "Wix", icon: <FaWix size={65} /> },
+];
+
+const digital_marketing = [
+  { name: "SEO & SMM", icon: <TbSeo size={65} /> },
+  { name: "Social Media", icon: <TbSocial size={65} /> },
+  { name: "Pay per click", icon: <RiAdvertisementLine size={65} /> },
+  { name: "Performance marketing", icon: <GrDocumentPerformance size={65} /> },
+  { name: "Brand Kit", icon: <RiTwitterXLine size={65} /> },
+];
+
+const UI_UX = [
+  { name: "Website Design", icon: <CgWebsite size={65} /> },
+  { name: "Mobile App Development", icon: <FaMobileAlt size={65} /> },
+  { name: "Use Ability Test", icon: <FaRegPlusSquare size={65} /> },
+  { name: "Wireframing", icon: <FaPencilRuler size={65} /> },
+];
+
+const software_development = [
+  { name: "API's", icon: <PiGitBranchLight size={65} /> },
+  { name: "Enterprise", icon: <FaBriefcase size={60} /> },
+  { name: "Micro Services", icon: <CiMicrochip size={65} /> },
+  { name: "All Powered Solutions", icon: <SlChemistry size={65} /> },
+  { name: "CRM", icon: <SiCivicrm size={65} /> },
 ];
 
 const ServicesDeliver = () => {
@@ -82,6 +118,27 @@ const ServicesDeliver = () => {
           sub="Solution"
           desc="CMS Solution Ready to unlock the potential of your content? Contact us today for a free consultation and discover how our CMS solutions can transform your website."
           btn="Visit Our CMS Solution Services"
+        />
+        <RootDesign
+          services={digital_marketing}
+          title="Digital"
+          sub=" Marketing"
+          desc="Ready to conquer the digital world? Let's discuss your goals and craft a winning strategy together!"
+          btn="Visit Our Digital Marketing Services"
+        />
+        <RootDesign
+          services={UI_UX}
+          title="UI/UX"
+          sub="Design"
+          desc="Ready to conquer the digital world? Let's discuss your goals and craft a winning strategy together!"
+          btn="Visit Our UI/UX Design Services"
+        />
+        <RootDesign
+          services={software_development}
+          title="Custom Software"
+          sub="Development"
+          desc="Ready to conquer the digital world? Let's discuss your goals and craft a winning strategy together!"
+          btn="Visit Our Custom Software Development Services"
         />
       </div>
       <GetInTouch />

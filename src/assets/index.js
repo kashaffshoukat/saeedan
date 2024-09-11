@@ -5,7 +5,7 @@ import atif from './atif.png'
 import rohan from './rohan.png'
 import pmbg from './pmbg.png'
 import mudasser from './mdd.png'
-import anas from './anas.png'
+import anas from './anas1.png'
 import amir from './amir.png'
 import moaz from './mmoaz.png'
 import ali from './ali2.png'
@@ -17,8 +17,23 @@ import shahbaz from './shahbaz.png'
 import zubair from './zubair.png'
 import murtaza from './murtaza.png'
 import haseeb from './haseeb.png'
-
+import fida from './fida.png'
+import react from './bgusama.png'
+import laravel from './anasbg.png'
+import react2 from './moazbg.png'
+import hamzabg from './hamzabg.png'
+import python from './python.jpg'
+import salambg from './salambg.png'
+import amirbg from './amirbg.png'
+import wajidbg from './wajidbg.png'
+import wajid from './wajid.png'
+import irfan from './irfan.png'
+import blogpic from './web-app.png'
+import avatar from './836.jpg'
+import zubairp from './zubairp.jpg'
+import mads from './web.png'
 
 export {
-    teampic,teamAll,bgPint,atif,rohan,pmbg,mudasser,anas,amir,moaz,ali,salam,hamza,daniyal,usama,shahbaz,zubair,murtaza,haseeb
+    teampic,teamAll,bgPint,atif,rohan,pmbg,mudasser,anas,amir,moaz,ali,salam,hamza,daniyal,usama,shahbaz,zubair,murtaza,haseeb,fida,react,laravel,react2,hamzabg,python
+    ,salambg,amirbg,wajidbg,wajid,irfan,blogpic,avatar,zubairp,mads
 }

@@ -6,7 +6,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ['Outfit', 'sans-serif'],
+      sans: ["Outfit", "sans-serif"],
     },
     screens: {
       "2xsm": "375px",
@@ -51,7 +51,9 @@ module.exports = {
         success: "#219653",
         danger: "#D34053",
         warning: "#FFA70B",
-        
+        problems: "#F8F8FF",
+        problemBorder: "#DCDCDC",
+        skyBlue: "#B0E0E6",
       },
       opacity: {
         65: ".65",
