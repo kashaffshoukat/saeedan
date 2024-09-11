@@ -12,7 +12,7 @@ const WebServicesCustomCards = ({program,para}) => {
         <div className="card-back flex flex-col gap-4 text-start bg-blue-500 rounded-xl  text-white p-4 shadow-lg">
           <h2 className="text-lg font-bold">{program}</h2>
           <p className='text-sm '>{para}</p>
-          <FaArrowRight className='text-2xl'/>
+          <FaArrowRight className='text-2xl mx-auto'/>
         </div>
       </div>
     </div>

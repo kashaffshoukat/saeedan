@@ -14,7 +14,7 @@ const WebServicesSlider = () => {
             const itemWidth = items[0].offsetWidth;
 
             slider.style.width = `${totalItems * itemWidth}px`;
-            slider.style.animation = `slide ${totalItems * 0.6}s linear infinite`;
+            slider.style.animation = `slide ${totalItems * 1}s linear infinite`;
 
             for (let i = 0; i < totalItems; i++) {
                 slider.appendChild(items[i].cloneNode(true));
@@ -27,10 +27,10 @@ const WebServicesSlider = () => {
         <div className='text-3xl flex items-center justify-center'>
             <h1>BE AMONG THE 1% MOST PRODUCTIVE TEAMS IN THE WORLD</h1>
         </div>
-       <div className=" bg-[#052afb] h-20 mt-5 overflow-hidden">
+       <div className="flex bg-[#052afb] h-24 mt-5 overflow-hidden">
             <div
                 ref={sliderRef}
-                className="flex items-center gap-14 whitespace-nowrap infinite-slider"
+                className="flex items-center justify-center gap-14 whitespace-nowrap infinite-slider"
                 >
                 <div className="flex-shrink-0 p-2.5 text-xl font-bold">
                     <img src={logo1} className="h-10 flex items-center justify-center" alt="" />

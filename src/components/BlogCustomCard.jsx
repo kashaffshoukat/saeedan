@@ -11,7 +11,7 @@ const BlogCustomCard = ({heading1,heading2,name,position}) => {
         <div>
           <div className='bg-white py-2 px-0 w-full absolute bottom-0 right-0 left-0 text-center shadow-md'>
             <p className='text-lg text-left pl-2'>{heading1}</p>
-            <p className='text-base text-blue-500 font-medium text-left pl-2'>{heading2}</p>
+            <p className='text-base text-[#636266] font-medium text-left pl-2'>{heading2}</p>
           <hr/>
           <div className='flex gap-2'>
           <img src={zubairp} alt="" className='h-12 w-12 object-cover rounded-full mt-2 ml-1 ' /> 

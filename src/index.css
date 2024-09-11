@@ -58,3 +58,50 @@ transform: rotateY(180deg);
 .perspective:hover .card-inner {
 transform: rotateY(180deg);
 }
+/* ****************************** */
+.slider-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-content {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f3f3f3;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+

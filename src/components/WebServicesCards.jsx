@@ -21,7 +21,7 @@ const WebServicesCards = () => {
             para: 'Gain actionable insights like KPIs, Sales, and Other metrics in a presentable manner. Data, analytics, and Insights to empower your Business.'
         },
         {
-            program: 'UI / UX Designing',
+            program: 'UI / UX. Designing',
             para: 'Make your Website a hub of communication and information. Our Web Portal development services provide a user-friendly interface and seamless integration.'
         },
         {

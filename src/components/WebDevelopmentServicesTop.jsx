@@ -8,8 +8,8 @@ import { SiUpwork } from "react-icons/si";
 const WebDevelopmentServicesTop = () => {
   return (
     <>
-      <div className='grid grid-cols-12 text-white bg-[#314252]'>
-        <div className='col-span-7 px-20 py-12'>
+      <div className='grid grid-cols-12 px-20 py-12 text-white bg-[#314252]'>
+        <div className='col-span-7'>
           <div className='flex flex-col gap-8'>
             <h2 className='flex gap-2 text-lg'>Home <FaAngleRight className='mt-1' /> Servcies <FaAngleRight className='mt-1' />Web Development</h2>
             <h1 className='text-4xl font-bold'>Web Development Services</h1>
@@ -20,31 +20,20 @@ const WebDevelopmentServicesTop = () => {
             <div className='flex flex-row gap-8'>
               <div className='border-r-2'>
                <img src={fiver} alt="" className='h-10 w-auto' />
-                
                   <div className='flex flex-row'>
-                    <FaRegStar className='text-2xl' />
-                    <FaRegStar className='text-2xl' />
-                    <FaRegStar className='text-2xl' />
-                    <FaRegStar className='text-2xl' />
-                    <FaRegStar className='text-2xl' />
+                    ⭐⭐⭐⭐⭐
                   </div>
               </div>
               <div className='border-r-2'>
              <img src={upwork} alt="" className='h-10 w-auto' />
                 <div className='flex flex-row'>
-                  <FaRegStar className='text-2xl' />
-                  <FaRegStar className='text-2xl' />
-                  <FaRegStar className='text-2xl' />
-                  <FaRegStar className='text-2xl' />
+                ⭐⭐⭐⭐⭐
                 </div>
               </div>
               <div>
               <img src={google} alt="" className='h-10 w-auto' />
                 <div className='flex flex-row'>
-                  <FaRegStar className='text-2xl' />
-                  <FaRegStar className='text-2xl' />
-                  <FaRegStar className='text-2xl' />
-                  <FaRegStar className='text-2xl' />
+                ⭐⭐⭐⭐⭐
                 </div>
               </div>
             </div>

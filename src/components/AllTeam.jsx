@@ -47,7 +47,7 @@ const data = [
       image: ali,
       name: 'Ali Husnain',
       position: 'Laravel Developer',
-      backgroundColor: '#2f9300',
+      backgroundColor: '#c8cbff',
       backgroundImage:amirbg
 
   },
@@ -111,7 +111,7 @@ const data = [
       image: fida,
       name: 'Fida Hussain',
       position: 'Python Developer',
-      backgroundColor: '#33FF57',
+      backgroundColor: '#B0B53E',
       backgroundImage:python
 
   },
