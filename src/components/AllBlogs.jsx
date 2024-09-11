@@ -23,6 +23,7 @@ const AllBlogs = () => {
             name: 'Abdul Basit Khan',
             position: 'Cheif Marketing Officer - CMO'
         },
+
     ]
     return (
         <>
@@ -33,20 +34,20 @@ const AllBlogs = () => {
                     </h2>
                 </div>
                 <div>
-                    <div className="flex items-center bg-white rounded border ">
+                    <div className="flex items-center bg-white rounded-full border-[#808080] border ">
                         <input
                             placeholder="Search..."
                             type="text"
-                            className="mr-2 p-2 text-gray-600"
+                            className="mr-2 p-2 text-gray-600 rounded-full focus:outline-none"
                         />
                         <div className="p-2">
-                            <FaSearch className="text-gray-600" />
+                            <FaSearch className="text-[#808080]" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="grid grid-cols-3 md:gap-8 py-12 md:py-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:py-16">
                 {blogsdata.map((data, index) => (
                     <div key={index}>
                         <BlogCustomCard
@@ -58,6 +59,7 @@ const AllBlogs = () => {
                     </div>
                 ))}
             </div>
+
 
         </>
 

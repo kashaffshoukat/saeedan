@@ -22,7 +22,7 @@ const MobileAppServices = () => {
   <TechnologyStack/>
   <MainFeatures/>
   <OurProcess/>
-  {/* <TeamSlider/> */}
+  <TeamSlider/>
   {/* <FAQS/> */}
   {/* <GetInTouch /> */}
  </div>

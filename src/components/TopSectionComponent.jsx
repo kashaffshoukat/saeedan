@@ -12,7 +12,6 @@ const TopSectionComponent = ({ head1, head2, head3, description, picture, button
             </h2>
           </div>
           <div>
-
             <p className="text-2xl md:text-2xl">{description}</p>
           </div>
 

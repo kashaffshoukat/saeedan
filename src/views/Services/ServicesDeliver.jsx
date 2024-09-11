@@ -141,7 +141,7 @@ const ServicesDeliver = () => {
           btn="Visit Our Custom Software Development Services"
         />
       </div>
-      <GetInTouch />
+      {/* <GetInTouch /> */}
     </div>
   );
 };

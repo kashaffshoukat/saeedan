@@ -8,7 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const ServicesTop = () => {
   return (
     <div className="px-4 md:px-20 py-8 md:py-12">
-      {/* <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-6">
           <div className="p-6 rounded-lg mt-6 md:mt-20">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900">
@@ -43,12 +43,12 @@ const ServicesTop = () => {
           />
           <div className="absolute bottom-4 md:bottom-7 -left-6 md:-left-7 bg-blue-950 w-12 md:w-14 h-12 md:h-14 rounded-full"></div>
         </div>
-      </div> */}
-      <TopSectionComponent head1={'We Engineer Software Solutions'} head2={'Services and Solutions at'} head3={'Saeedan Technology'} description={'Imagine a tech-powered future for your business with our guidance and expertise. Unleash the potential of innovative solutions tailored just for you.'} buttonComponent={
-        <Button icon={<FaArrowRightLong />}>
-          Explore Our Digital Solutions
-        </Button>
-      } picture={service} />
+      </div>
+      {/* <TopSectionComponent head1={'We Engineer Software Solutions'} head2={'Services and Solutions at'} head3={'Saeedan Technology'} description={'Imagine a tech-powered future for your business with our guidance and expertise. Unleash the potential of innovative solutions tailored just for you.'} buttonComponent={
+        // <Button icon={<FaArrowRightLong />}>
+        //   Explore Our Digital Solutions
+        // </Button>
+      } picture={service} /> */}
     </div>
   );
 };

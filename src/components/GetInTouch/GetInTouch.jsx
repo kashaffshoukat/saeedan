@@ -78,7 +78,7 @@ const GetInTouch = () => {
             ></textarea>
           </div>
 
-          <div className="text-center">
+          <div>
             <button
               type="submit"
               className="px-6 py-3 bg-primary text-white font-medium rounded-md shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"

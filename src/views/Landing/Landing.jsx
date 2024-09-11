@@ -59,7 +59,7 @@ const Landing = () => {
           <Service />
           <Testimonial />
           <TechnologyStack />
-          <FAQs />
+          {/* <FAQs /> */}
         </section>
       </div>
     </>

@@ -76,14 +76,6 @@ const data = [
 
   },
   {
-      image: usama,
-      name: 'Usama Jawad',
-      position: 'React JS Developer',
-      backgroundColor: '#ebc182',
-      backgroundImage:react2
-
-  },
-  {
       image: shahbaz,
       name: 'Shahbaz Ali',
       position: 'Laravel Developer',

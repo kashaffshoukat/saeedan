@@ -10,6 +10,7 @@ import Blogs from "./views/Blogs/Blogs";
 import WebDevelopmentServices from "./views/WebDevelopmentServices/WebDevelopmentServices";
 import Company from "./views/Company";
 import Portfolio from "./views/Portfolio";
+import BlogsDetailsComponent from "./views/Blogs/BlogsDetailsComponent";
 
 export default function Router() {
   let element = useRoutes([
@@ -21,6 +22,7 @@ export default function Router() {
         { path: "/team", element: <Team /> },
         {path: "/blog", element: <Blogs />},
         {path:"/WebDevelopmentServices", element:<WebDevelopmentServices/>},
+        {path:"/BlogsDetailsComponent", element:<BlogsDetailsComponent/>},
         {
           path: "/",
           element: <Landing />,
