@@ -42,11 +42,11 @@ import logo4 from './logo4.png'
 import logo5 from './logo5.png'
 import logo6 from './logo6.png'
 import companypic from './aaa.png'
-
+import service from './service.jpg'
 
 
 
 export {
-    teampic,teamAll,bgPint,atif,rohan,pmbg,mudasser,anas,amir,moaz,ali,salam,hamza,daniyal,usama,shahbaz,zubair,murtaza,haseeb,fida,react,laravel,react2,hamzabg,python
-    ,salambg,amirbg,wajidbg,wajid,irfan,blogpic,avatar,zubairp,mads,fiver,upwork,google,logo1,logo2,logo3,logo4,logo5,logo6,companypic
+    teampic, teamAll, bgPint, atif, rohan, pmbg, mudasser, anas, amir, moaz, ali, salam, hamza, daniyal, usama, shahbaz, zubair, murtaza, haseeb, fida, react, laravel, react2, hamzabg, python
+    , salambg, amirbg, wajidbg, wajid, irfan, blogpic, avatar, zubairp, mads, fiver, upwork, google, logo1, logo2, logo3, logo4, logo5, logo6, companypic, service
 }
