@@ -22,7 +22,7 @@ export default function Router() {
         { path: "/team", element: <Team /> },
         { path: "/blog", element: <Blogs /> },
         { path: "/company", element: <Company /> },
-        { path: "/BlogsDetailsComponent", element: <BlogsDetailsComponent /> },
+        { path: "/blog/:slug", element: <BlogsDetailsComponent /> },
         {
           path: "/",
           element: <Landing />,
@@ -44,6 +44,7 @@ export default function Router() {
           path: "/services",
           element: <Services />,
         },
+         
         {
           path: "/portfolio",
           element: <Portfolio />,
