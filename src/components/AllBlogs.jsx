@@ -27,23 +27,8 @@ const AllBlogs = ({ blogs }) => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:py-8">
                 {blogs.map((blog, index) => (
-                    <div key={index} className="bg-white p-5 rounded-lg h-full shadow-lg transition-transform transform hover:scale-105">
-                        <img
-                            src={`${imageUrl}${blog.img}`}
-                            alt={blog.img_alt_text}
-                            className="h-40 w-full object-cover rounded-lg mb-4"
-                        />
-
-                        <p className="text-lg font-semibold text-left mb-2">{blog.title}</p>
-
-                        <div
-                            className="text-sm text-gray-600 font-medium text-left mb-4 line-clamp-2"
-                            dangerouslySetInnerHTML={{ __html: blog.description }}
-                        />
-
-                        <hr className="my-2" />
-
-                        <div className="flex items-center gap-3 mt-3">
+                    <Link key={index} to={`/blog/${blog.slug_url}`}>
+                        <div className="bg-white p-5 rounded-lg shadow-lg transition-transform transform hover:scale-105">
                             <img
                                 src={`${imageUrl}${blog.img}`}
                                 alt={blog.img_alt_text}
