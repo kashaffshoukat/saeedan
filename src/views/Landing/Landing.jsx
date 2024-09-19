@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Spinner from "../../components/Spinner";
 import BenefitsCard from "../../components/BenifitsCart";
 import { FaCode, FaComputer } from "react-icons/fa6";
@@ -14,6 +14,16 @@ import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import PortolioSlider from "./PortolioSlider";
 
 const Landing = () => {
+
+  const getInTouchRef = useRef(null);
+
+  const scrollToGetInTouch = () => {
+    getInTouchRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   const webDevStacks = [
     "React.js",
     "Node.js",
@@ -45,7 +55,7 @@ const Landing = () => {
                 user-friendly apps. Click now to turn your dreams into reality!
               </p>
               <div>
-                <Button icon={<FaArrowRightLong />}>Schedule Free Consultation</Button>
+                <Button onClick={scrollToGetInTouch} icon={<FaArrowRightLong />}>Schedule Free Consultation</Button>
               </div>
             </div>
 
@@ -58,12 +68,14 @@ const Landing = () => {
             </div>
           </div>
           <Benefits />
-          <Service />
-          <PortolioSlider/>
+            <Service getInTouchRef={getInTouchRef}  />
+          <PortolioSlider />
           <Testimonial />
           <TechnologyStack />
           <FAQs />
-          <GetInTouch/>
+          <div ref={getInTouchRef}>
+            <GetInTouch />
+          </div>
         </section>
       </div>
     </>

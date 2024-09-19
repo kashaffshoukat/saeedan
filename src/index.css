@@ -12,6 +12,10 @@ body {
 
 /* styles.css or any custom CSS file */
 /* Define the keyframes for the sliding animation */
+*{
+    scroll-behavior: smooth;
+}
+
 @keyframes slide {
     0% {
         transform: translateX(0);

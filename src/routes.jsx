@@ -11,6 +11,7 @@ import Company from "../src/views/Company/index";
 import Portfolio from "../src/views/Portfolio/index";
 import BlogsDetailsComponent from "./views/Blogs/BlogsDetailsComponent";
 import WebDevelopmentServices from "./views/WebDevelopmentServices/WebDevelopmentServices";
+import GetInTouch from "./components/GetInTouch/GetInTouch";
 
 export default function Router() {
   let element = useRoutes([
@@ -27,6 +28,7 @@ export default function Router() {
           path: "/",
           element: <Landing />,
         },
+       { path:"/GetInTouch", element:<GetInTouch/>},
         {
           path: "/careers",
           element: <Careers />,

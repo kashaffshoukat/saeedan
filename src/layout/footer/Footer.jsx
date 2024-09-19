@@ -4,7 +4,7 @@ import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 const Footer = () => {
   return (
-    <footer className="bg-primary  text-white px-16">
+    <footer className="bg-primary  text-white px-4">
       <div className="flex items-center justify-between py-6">
         <img src="/assets/Logo.webp" alt="Logo" className="w-14 " />
         <div className="flex items-center">

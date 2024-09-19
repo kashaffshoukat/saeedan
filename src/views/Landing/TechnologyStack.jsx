@@ -2,6 +2,8 @@ import React from 'react';
 import { FaAngular, FaHtml5, FaJava, FaJs, FaNodeJs, FaPhp, FaPython, FaReact, FaSwift, FaVuejs } from 'react-icons/fa';
 import { FaTrainSubway } from 'react-icons/fa6';
 import { AiOutlineConsoleSql } from "react-icons/ai";
+import { SiFlutter } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { FaNode } from "react-icons/fa";
 import { FaBootstrap } from "react-icons/fa";
 const frontenedicons = [
@@ -10,13 +12,12 @@ const frontenedicons = [
     FaReact,
     FaJs,
     FaPhp,
+    RiTailwindCssFill,
     AiOutlineConsoleSql,
-    FaAngular,
-    FaPython,
-    FaReact,
-    FaJs,
     FaNode,
     FaBootstrap,
+    SiFlutter,
+
 ];
 
 const TechnologyStack = () => {
@@ -29,7 +30,7 @@ const TechnologyStack = () => {
             <div className='mt-3'>  
                 <div className='flex flex-wrap mt-3 p-10 gap-14 rounded-lg bg-[#2e5090]'>
                     {frontenedicons.map((Icon, index) => (
-                        <Icon key={index} className='text-7xl text-[white]' />
+                        <Icon key={index} className='mx-auto text-4xl text-[white]' />
                     ))}
                 </div>
             </div>

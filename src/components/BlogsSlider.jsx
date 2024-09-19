@@ -1,13 +1,30 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import BlogsCustomSliderCard from './page/BlogsCustomSliderCard';
 import { FaAngleRight } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
+import { GetAllBlog } from '../utils/_BLOG';
 
 const BlogsSlider = () => {
+
     const sliderRef = useRef(null);
+    const [blogs, setBlogs] = useState([]);
+    
+
+    useEffect(() => {
+      const fetchBlogs = async () => {
+        try {
+          const response = await GetAllBlog();
+          setBlogs(response.data.payload);
+        } catch (error) {
+          console.error("Error fetching blogs:", error);
+        }
+      };
+  
+      fetchBlogs();
+    }, []);
 
     const getSliderSettings = () => {
         const settings = {
@@ -35,14 +52,6 @@ const BlogsSlider = () => {
 
     const settings = getSliderSettings();
 
-    const cardData = [
-        { heading1: 'XAMPP vs Laravel Herd: Choosing the Right Local Development Environment', heading2: 'Compare XAMPP and Laravel Herd for local PHP development. Learn the ke...' },
-        { heading1: 'XAMPP vs Laravel Herd: Choosing the Right Local Development Environment', heading2: 'Compare XAMPP and Laravel Herd for local PHP development. Learn the ke...' },
-        { heading1: 'XAMPP vs Laravel Herd: Choosing the Right Local Development Environment', heading2: 'Compare XAMPP and Laravel Herd for local PHP development. Learn the ke...' },
-        { heading1: 'XAMPP vs Laravel Herd: Choosing the Right Local Development Environment', heading2: 'Compare XAMPP and Laravel Herd for local PHP development. Learn the ke...' },
-
-    ];
-
 
     const handlePrev = () => {
         sliderRef.current.slickPrev();
@@ -59,11 +68,12 @@ const BlogsSlider = () => {
 
             <div className="relative">
                 <Slider {...settings} ref={sliderRef}>
-                    {cardData.map((card, index) => (
+                    {blogs.map((card, index) => (
                         <div key={index} className="p-4">
                             <BlogsCustomSliderCard
-                                heading1={card.heading1}
-                                heading2={card.heading2}
+                                blogpic={card.img}
+                                heading1={card.title}
+                                heading2={card.description}
                             />
                         </div>
                     ))}

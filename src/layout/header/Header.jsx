@@ -33,7 +33,7 @@ const Header = () => {
     <header
       className={`bg-primary text-white sticky top-0 z-50 transition-shadow duration-300 ${hasShadow ? "shadow-lg" : ""}`}
     >
-      <div className={`flex justify-between items-center py-4 px-16 ${isMenuOpen ? "transition-transform transform translate-y-0" : "transition-transform transform md:-translate-y-0 -translate-y-2"}`}>
+      <div className={`flex justify-between items-center py-4 px-4 ${isMenuOpen ? "transition-transform transform translate-y-0" : "transition-transform transform md:-translate-y-0 -translate-y-2"}`}>
         {!isMenuOpen && (
           <div className="flex items-center space-x-2">
             <Link to="/">
@@ -41,7 +41,7 @@ const Header = () => {
             </Link>
           </div>
         )}
-        <div className="absolute right-7 top-9 md:hidden">
+        <div className="absolute right-4 top-9 md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white focus:outline-none"

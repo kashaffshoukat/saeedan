@@ -1,24 +1,9 @@
 import { useEffect, useState } from "react";
 import { ShowPortfolio } from "../../utils/_Portfolio";
 
-const LatestProjects = () => {
+const LatestProjects = ({ onFetch }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [portFolios, setPortFolios] = useState([]);
-
-  const problems = [
-    {
-      title: "Embrace the Future, Today",
-      description: "We have a proven track record of success",
-    },
-    {
-      title: "Dedicated Team",
-      description: "We have a proven track record of success",
-    },
-    {
-      title: "Ensure long-term scalability",
-      description: "Your goals, our expertise. Tell us your vision",
-    },
-  ];
 
   const getAllPortfoliosProjects = async () => {
     try {
@@ -29,8 +14,9 @@ const LatestProjects = () => {
       } = res;
       if (success) {
         setPortFolios(payload);
+        onFetch(payload);
       } else {
-        console.error(message); // Handle case when success is false
+        console.error(message);
       }
     } catch (error) {
       console.error("Error fetching portfolios:", error);
@@ -52,69 +38,68 @@ const LatestProjects = () => {
         {
           isLoading
             ? Array.from({ length: 6 }).map((_, index) => (
-                <div
-                  key={index}
-                  role="status"
-                  className="w-full p-4 border border-gray-200 rounded shadow duration-500 transition-all animate-pulse md:p-6 dark:border-gray-700"
-                >
-                  <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
-                    <svg
-                      className="w-10 h-10 text-gray-200 dark:text-gray-600"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 16 20"
-                    >
-                      <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z" />
-                      <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
-                    </svg>
-                  </div>
-                  <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-                  <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-                  <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-                  <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                  <div className="flex items-center mt-4">
-                    <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-                    <div>
-                      <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2"></div>
-                      <div className="w-48 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                    </div>
-                  </div>
-                  <span className="sr-only">Loading...</span>
+              <div
+                key={index}
+                role="status"
+                className="w-full p-4 border border-gray-200 rounded shadow duration-500 transition-all animate-pulse md:p-6 dark:border-gray-700"
+              >
+                <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+                  <svg
+                    className="w-10 h-10 text-gray-200 dark:text-gray-600"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 16 20"
+                  >
+                    <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z" />
+                    <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
+                  </svg>
                 </div>
-              ))
+                <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+                <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                <div className="flex items-center mt-4">
+                  <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+                  <div>
+                    <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2"></div>
+                    <div className="w-48 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                  </div>
+                </div>
+                <span className="sr-only">Loading...</span>
+              </div>
+            ))
             : portFolios.map((portFolio) => (
-                <div
-                  key={portFolio.id}
-                  className="flex flex-col bg-white border-[1.5px] border-problemBorder rounded-lg duration-500 transition-all"
-                >
-                  {/* image */}
-                  <img
-                    src={`${import.meta.env.VITE_IMAGE_URL}/${
-                      portFolio.banner_image
-                    }`}
-                    alt=""
-                    className="w-full h-56 object-cover rounded-lg"
-                  />
+              <div
+                key={portFolio.id}
+                className="flex flex-col bg-white border-[1.5px] border-problemBorder rounded-lg duration-500 transition-all"
+              >
+                {/* image */}
+                <img
+                  src={`https://test.saeedantechpvt.com/${portFolio.first_content_image}`}
+                  alt={portFolio.portfolio_title || "Portfolio Image"}
+                  className="w-full h-full object-cover rounded-lg"
+                />
 
-                  {/* title and description */}
-                  <div className="flex flex-col items-start justify-between p-5 gap-2">
-                    <h1 className="font-semibold text-lg md:text-xl lg:text-2xl">
-                      {portFolio?.portfolio_title}
-                    </h1>
-                    <p className="text-md md:text-[1rem] text-black/55">
-                      {portFolio?.portfolio_description}
-                    </p>
-                  </div>
 
-                  {/* button */}
-                  <div className="p-5">
-                    <button className="text-white bg-primary rounded-md  px-5 py-2 max-w-max">
-                      Look it up
-                    </button>
-                  </div>
+                {/* title and description */}
+                <div className="flex flex-col items-start justify-between p-5 gap-2">
+                  <h1 className="font-semibold text-lg md:text-xl lg:text-2xl">
+                    {portFolio?.portfolio_title}
+                  </h1>
+                  <p className="text-md md:text-[1rem] text-black/55">
+                    {portFolio?.portfolio_description}
+                  </p>
                 </div>
-              ))
+
+                {/* button */}
+                <div className="p-5">
+                  <button className="text-white bg-primary rounded-md  px-5 py-2 max-w-max">
+                    Look it up
+                  </button>
+                </div>
+              </div>
+            ))
           // Skeleton Loader
         }
       </div>

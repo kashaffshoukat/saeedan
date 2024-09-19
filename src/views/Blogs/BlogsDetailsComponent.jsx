@@ -85,7 +85,7 @@ const BlogsDetailsComponent = () => {
           </div>
         )}
     </div> */}
-<BlogDetail blogs={singleBlogs} />
+          <BlogDetail blogs={singleBlogs} />
           <BlogDetail2 blogs={singleBlogs} />
           <BlogDetail3 blogs={singleBlogs} />
           <BlogsSlider blogs={singleBlogs} />
