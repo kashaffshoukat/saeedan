@@ -1,12 +1,19 @@
-import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 const Footer = () => {
   return (
     <footer className="bg-primary  text-white px-4">
       <div className="flex items-center justify-between py-6">
-        <img src="/assets/Logo.webp" alt="Logo" className="w-14 " />
+        <LazyLoadImage
+          src="/assets/Logo.webp"
+          effect="blur"
+          className="w-14  object-cover "
+          alt="Logo"
+        />
         <div className="flex items-center">
           <FaLinkedin size={25} className="cursor-pointer mx-4" />
           <FaFacebook size={25} className="cursor-pointer mx-4" />
@@ -14,7 +21,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-0">
-        <hr class="text-white w-full" />
+        <hr className="text-white w-full" />
       </div>
       <div className="container mx-auto py-5 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>

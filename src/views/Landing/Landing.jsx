@@ -1,8 +1,4 @@
-import React, { useRef } from "react";
-import Spinner from "../../components/Spinner";
-import BenefitsCard from "../../components/BenifitsCart";
-import { FaCode, FaComputer } from "react-icons/fa6";
-import ServiceHomeCard from "../../components/ServiceHomeCard";
+import { useRef } from "react";
 import Button from "../../components/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Benefits from "./Benefits";
@@ -12,9 +8,10 @@ import TechnologyStack from "./TechnologyStack";
 import FAQs from "./FAQS";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import PortolioSlider from "./PortolioSlider";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Landing = () => {
-
   const getInTouchRef = useRef(null);
 
   const scrollToGetInTouch = () => {
@@ -24,13 +21,6 @@ const Landing = () => {
     });
   };
 
-  const webDevStacks = [
-    "React.js",
-    "Node.js",
-    "Laravel",
-    "MongoDB",
-    "Tailwind CSS",
-  ];
   return (
     <>
       <div className=" px-3 md:px-20 py-12">
@@ -55,20 +45,26 @@ const Landing = () => {
                 user-friendly apps. Click now to turn your dreams into reality!
               </p>
               <div>
-                <Button onClick={scrollToGetInTouch} icon={<FaArrowRightLong />}>Schedule Free Consultation</Button>
+                <Button
+                  onClick={scrollToGetInTouch}
+                  icon={<FaArrowRightLong />}
+                >
+                  Schedule Free Consultation
+                </Button>
               </div>
             </div>
 
             <div className="lg:w-1/2">
-              <img
+              <LazyLoadImage
                 src="/assets/homepage.webp"
-                alt="Web and App Development Illustration"
-                className="w-full h-auto"
+                effect="blur"
+                className="w-full h-auto object-cover"
+                alt={"Web and App Development Illustration"}
               />
             </div>
           </div>
           <Benefits />
-            <Service getInTouchRef={getInTouchRef}  />
+          <Service getInTouchRef={getInTouchRef} />
           <PortolioSlider />
           <Testimonial />
           <TechnologyStack />

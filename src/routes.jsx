@@ -28,19 +28,20 @@ export default function Router() {
           path: "/",
           element: <Landing />,
         },
-       { path:"/GetInTouch", element:<GetInTouch/>},
+        { path: "/GetInTouch", element: <GetInTouch /> },
         {
           path: "/careers",
           element: <Careers />,
         },
-        { path: "/WebDevelopmentServices", element: <WebDevelopmentServices /> },
-       
+        {
+          path: "/WebDevelopmentServices",
+          element: <WebDevelopmentServices />,
+        },
+
         {
           path: "/job-application",
           element: <JobApplication />,
-        }
-       
-        ,
+        },
 
         {
           path: "/contact-us",
@@ -50,7 +51,7 @@ export default function Router() {
           path: "/services",
           element: <Services />,
         },
-         
+
         {
           path: "/portfolio",
           element: <Portfolio />,

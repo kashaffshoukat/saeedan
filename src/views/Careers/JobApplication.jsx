@@ -1,12 +1,12 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useSnackbar } from 'notistack';
+import { useSnackbar } from "notistack";
 import { SnackbarProvider } from "notistack";
 
 const JobApplication = () => {
   const location = useLocation();
   const { jobId } = location.state || {};
-  console.log(jobId, 'Job ID');
+  console.log(jobId, "Job ID");
 
   const fileInputRef = useRef(null);
   const [formValues, setFormValues] = useState({
@@ -18,7 +18,7 @@ const JobApplication = () => {
   });
   const [selectedFile, setSelectedFile] = useState(null);
 
-  const { enqueueSnackbar } = useSnackbar(); 
+  const { enqueueSnackbar } = useSnackbar();
   const handleFileUploadClick = () => {
     if (fileInputRef.current) {
       fileInputRef.current.click();
@@ -54,17 +54,19 @@ const JobApplication = () => {
     formData.append("resume", selectedFile);
 
     try {
-      const response = await fetch(`https://test.saeedantechpvt.com/api/jobApplicationstore/${formValues.id}`, {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        `https://test.saeedantechpvt.com/api/jobApplicationstore/${formValues.id}`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
 
       const result = await response.json();
-
 
       console.log(result);
 
@@ -73,7 +75,7 @@ const JobApplication = () => {
         email: "",
         phone: "",
         linkedin: "",
-        id: jobId
+        id: jobId,
       });
       setSelectedFile(null);
       enqueueSnackbar("Job applied successfully!", { variant: "success" });
@@ -101,7 +103,10 @@ const JobApplication = () => {
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Name:
                 </label>
                 <input
@@ -117,7 +122,10 @@ const JobApplication = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Email:
                 </label>
                 <input
@@ -133,7 +141,10 @@ const JobApplication = () => {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   Mobile:
                 </label>
                 <input
@@ -149,7 +160,10 @@ const JobApplication = () => {
               </div>
 
               <div>
-                <label htmlFor="linkedin" className="block text-gray-700 font-medium mb-2">
+                <label
+                  htmlFor="linkedin"
+                  className="block text-gray-700 font-medium mb-2"
+                >
                   LinkedIn Profile:
                 </label>
                 <input
@@ -184,7 +198,7 @@ const JobApplication = () => {
                   accept=".pdf, .doc, .docx"
                 />
                 <p className="mt-2 text-gray-700">
-                  {selectedFile ? selectedFile.name : 'No file chosen'}
+                  {selectedFile ? selectedFile.name : "No file chosen"}
                 </p>
               </div>
             </div>
