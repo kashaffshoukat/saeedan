@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import moment from 'moment';
+import { IoMdSearch } from "react-icons/io";
+
 
 const BlogDetail2 = ({ blogs }) => {
     const boxRefs = Array(blogs?.blog_contents?.length).fill().map(() => useRef(null));
@@ -33,8 +35,9 @@ const BlogDetail2 = ({ blogs }) => {
                         placeholder="Search..."
                         value={searchQuery}
                         onChange={handleSearchChange}
-                        className="mr-1 w-full p-2 text-gray-600"
+                        className="mr-1 w-full p-2 text-gray-600 outline-none"
                     />
+                    <IoMdSearch className='text-3xl cursor-pointer' />
                 </div>
 
                 {blogs?.blog_contents?.map((heading, index) => (

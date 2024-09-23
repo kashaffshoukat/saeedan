@@ -46,24 +46,33 @@ const Header = () => {
           </button>
         </div>
 
-        <nav className={`md:flex md:items-center transition-all duration-1000 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-screen" : "max-h-0"} md:max-h-full`}>
-          <div className={`flex flex-col gap-5 md:border-none border-t-2  py-4 md:py-0 md:flex-row md:space-x-8 md:mx-4`}>
-            {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                to={link.to}
-                onClick={handleLinkClick}
-                className={`flex items-center relative group text-xl text-start transition duration-300 ${location.pathname === link.to ? "text-yellow-400" : ""}`}
-              >
-                <span className="mr-2 md:hidden">{link.icon}</span>
-                {link.name}
-                <span
-                  className={`absolute left-0 -bottom-1 w-28 h-0.5 bg-yellow-400 transform transition-transform duration-300 ${location.pathname === link.to ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-                ></span>
-              </Link>
-            ))}
-          </div>
-        </nav>
+        <nav
+  className={`md:flex md:items-center transition-all duration-500 ease-in-out overflow-hidden ${
+    isMenuOpen ? "absolute top-24 left-0 w-full z-50 max-h-screen bg-primary" :"md:static md:w-auto w-full left-0 md:bg-none absolute bg-primary max-h-0"
+  } md:max-h-full`}
+>
+  <div className={`flex flex-col gap-5 md:border-none border-t-2 py-4 md:py-0 md:flex-row md:space-x-8 md:mx-4`}>
+    {navLinks.map((link, index) => (
+      <Link
+        key={index}
+        to={link.to}
+        onClick={handleLinkClick}
+        className={`flex items-center relative group left-4 text-xl text-start transition duration-300 ${
+          location.pathname === link.to ? "text-yellow-400" : ""
+        }`}
+      >
+        <span className="mr-2 md:hidden">{link.icon}</span>
+        {link.name}
+        <span
+          className={`absolute left-0 -bottom-1 w-28 h-0.5 bg-yellow-400 transform transition-transform duration-300 ${
+            location.pathname === link.to ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+          }`}
+        ></span>
+      </Link>
+    ))}
+  </div>
+</nav>
+
 
         {!isMenuOpen && (
           <div className="hidden lg:block">
