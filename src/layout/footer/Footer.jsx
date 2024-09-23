@@ -16,12 +16,12 @@ const Footer = () => {
     <footer className="bg-primary  text-white px-4">
       <div className="flex items-center justify-between py-6">
         <LazyLoadImage
+          onClick={gohome}
           src="/assets/Logo.webp"
           effect="blur"
-          className="w-14  object-cover "
+          className="w-14 cursor-pointer  object-cover "
           alt="Logo"
         />
-        <img onClick={gohome} src="/assets/Logo.webp" alt="Logo" className="w-14 cursor-pointer " />
         <div className="flex items-center">
           <a href="https://www.linkedin.com/company/saeedan-technology-pvt-ltd/posts/" target="_blank"><FaLinkedin  size={25} className="cursor-pointer mx-4" /></a>
          <a href="https://www.facebook.com/saeedantechnologyofficial" target="_blank"><FaFacebook  size={25} className="cursor-pointer mx-4" /></a>

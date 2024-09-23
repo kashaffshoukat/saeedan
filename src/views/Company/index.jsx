@@ -1,5 +1,4 @@
 import Problem from "./Problem";
-import Unleash from "./Unleash";
 import Page from "../../components/page";
 import CEO_Section from "../../components/CeoSection";
 import Set_Apart from "./SetApart";
@@ -11,8 +10,7 @@ const Company = () => {
 
   return (
     <Page title="Saeedan Company">
-      {/* <Unleash /> */}
-      <CustomTopComponent title1={'hi'} title2={'by'} description={'hhh'} btnLabel={'contajafhjhgj'} />
+      <CustomTopComponent title1={'Unleash Your potential with us'} title2={'Excellence begin here'} description={'Saeedan Technology is a Strategic collaborator to empower your business through cutting-edge IT solutions. Let’s maximize your potential growth.'} btnLabel={'Contact Us'} />
       <Problem />
       <CEO_Section />
       <div className="py-4">

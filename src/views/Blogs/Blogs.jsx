@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Blogstopsection from '../../components/Blogstopsection';
 import AllBlogs from '../../components/AllBlogs';
 import { GetAllBlog } from '../../utils/_BLOG';
+import CustomTopComponent from '../../components/CustomTopComponent';
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -9,7 +9,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await GetAllBlog();
+        const response = await GetAllBlog();  
         setBlogs(response.data.payload);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -21,7 +21,7 @@ const Blogs = () => {
 
   return (
     <>
-      <Blogstopsection />
+      <CustomTopComponent title1={'Saeedan Technology Blog'} description={'Blog about Technology, Business, Programming, Development, Marketing, and Artificial Intelligence'} btnLabel={'Contact Us'} />
       <div className='p-4'>
         <AllBlogs blogs={blogs} />
       </div>

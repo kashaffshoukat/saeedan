@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Page from "../../components/page";
 import { GetAllJobs } from "../../utils/_Showjobs";
 import { ClipLoader } from 'react-spinners'; 
+import CustomTopComponent from "../../components/CustomTopComponent";
 
 const Careers = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -48,10 +49,7 @@ const Careers = () => {
 
   return (
     <Page title="Careers">
-      <div className="bg-primary h-[40vh] flex items-center justify-center text-white flex-col">
-        <h1 className="text-4xl font-bold text-center">We are hiring</h1>
-        <h1 className="mt-4 text-2xl font-extralight text-center">Join Our Team</h1>
-      </div>
+      <CustomTopComponent title2={'We are hiring'} description={'Join Our Team'} btnLabel={'Contact Us'} />
 
       <div className="px-10 mx-auto my-10">
         <h2 className="text-2xl font-bold mb-6">Job Openings</h2>

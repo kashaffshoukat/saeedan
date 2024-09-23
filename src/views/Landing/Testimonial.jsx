@@ -133,9 +133,8 @@ const Testimonial = () => {
                 {Array.from({ length: 5 }, (_, i) => (
                   <FaStar
                     key={i}
-                    className={`text-yellow-400 ${
-                      i < testimonial.rating ? "text-yellow-500" : ""
-                    }`}
+                    className={`text-yellow-400 ${i < testimonial.rating ? "text-yellow-500" : ""
+                      }`}
                   />
                 ))}
               </div>
