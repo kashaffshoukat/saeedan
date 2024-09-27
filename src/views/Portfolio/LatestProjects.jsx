@@ -94,9 +94,17 @@ const LatestProjects = ({ onFetch }) => {
 
                 {/* button */}
                 <div className="p-5">
-                  <button className="text-white bg-primary rounded-md  px-5 py-2 max-w-max">
-                    Look it up
-                  </button>
+                 
+                  <a
+                  className="text-white bg-primary rounded-md  px-5 py-2 max-w-max"
+                        href={`https://test.saeedantechpvt.com/${portFolio.banner_image}`}
+                        target="_blank" // This makes the link open in a new tab
+                        rel="noopener noreferrer" // Recommended for security
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Look it up
+                      </a>
+                
                 </div>
               </div>
             ))
