@@ -39,21 +39,21 @@ const ContactUs = () => {
             </div>
             <div className="flex justify-center space-x-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/saeedan-technology-pvt-ltd/posts/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin className="text-2xl hover:text-gray-300" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/saeedantechnologyofficial"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaFacebookF className="text-2xl hover:text-gray-300" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/saeedantechnology/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
