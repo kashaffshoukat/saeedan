@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomTeamCard from './CustomTeamCard';
-import { ali, amir, anas, daniyal, fida, hamza, haseeb, moaz, mudasser, murtaza, rohan, salam, shahbaz, usama, zubair, pmbg, react, laravel, react2, hamzabg, python, salambg, amirbg, wajidbg, irfan, wajid, newpic, newpic2 } from '../assets';
+import { ali, amir, anas, daniyal, fida, hamza, haseeb, moaz, mudasser, murtaza, rohan, salam, shahbaz, usama, zubair, pmbg, react, laravel, react2, hamzabg, python, salambg, amirbg, wajidbg, irfan, wajid, newpic, newpic2, bdbg } from '../assets';
 
 const AllTeam = () => {
    
@@ -131,17 +131,17 @@ const data = [
   },
   {
     image: newpic,
-    name: 'Haseeb Mushtaq',
-    position: 'Laravel Developer',
-    backgroundColor: '#ebc182',
-    backgroundImage:amirbg
+    name: 'Usama Riaz',
+    position: 'Business Developer',
+    backgroundColor: '#008dad',
+    backgroundImage:bdbg
 }
 ,{
     image: newpic2,
-    name: 'Haseeb Mushtaq',
-    position: 'Laravel Developer',
+    name: 'Saad Ather',
+    position: 'Business Developer',
     backgroundColor: '#c8cbff',
-    backgroundImage:amirbg
+    backgroundImage:bdbg
 }
 ];
     return (

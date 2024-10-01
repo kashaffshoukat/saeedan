@@ -10,7 +10,7 @@ import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import PortolioSlider from "./PortolioSlider";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { amir, amirbg, landingbg } from "../../assets";
+import { amir, amirbg, landingbg, landingbg2, Landingbg3 } from "../../assets";
 
 const Landing = () => {
   const getInTouchRef = useRef(null);
@@ -112,12 +112,13 @@ const Landing = () => {
 
 
 
-          {/* </div> */}
-          <Benefits />
-          <Service getInTouchRef={getInTouchRef} />
-          <PortolioSlider />
-          <Testimonial />
-          <TechnologyStack />
+          <div className="px-20 py-12">
+            <Benefits />
+            <Service getInTouchRef={getInTouchRef} />
+            <PortolioSlider />
+            <Testimonial />
+            <TechnologyStack />
+          </div>
           <FAQs />
           <div ref={getInTouchRef}>
             <GetInTouch />
