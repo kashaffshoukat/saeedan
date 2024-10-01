@@ -27,7 +27,7 @@ const Landing = () => {
       <div className="overflow-hidden">
         <section className="bg-white">
           {/* <div className="mx-auto flex flex-col lg:flex-row items-center"> */}
-            {/* <div className="lg:w-1/2 mb-10 lg:mb-0 flex flex-col items-start justify-start">
+          {/* <div className="lg:w-1/2 mb-10 lg:mb-0 flex flex-col items-start justify-start">
               <h1 className="text-4xl text-primary mb-4 font-bold">
                 Web and App Development
               </h1>
@@ -55,7 +55,7 @@ const Landing = () => {
               </div>
             </div> */}
 
-            {/* <div className="lg:w-1/2">
+          {/* <div className="lg:w-1/2">
               <LazyLoadImage
                 src="/assets/homepage.webp"
                 effect="blur"
@@ -65,34 +65,38 @@ const Landing = () => {
             </div> */}
 
 
-<div className="relative flex flex-col gap-7 h-[70vh] items-center justify-center">
-      <div
-        className="absolute inset-0 bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: `url(${landingbg})` }}
-      >
-        <div className="absolute inset-0 bg-blue-950 opacity-40" />
-      </div>
-      <h1 className="text-7xl text-center text-white relative z-10">
-        Be the {" "}
-        <span className="underline underline-offset-8">
-        Trendsetter
-        </span> 
-        {" "}
-         in <br /> Your Digital Space
-      </h1>
-      <p className="text-3xl w-[80%] text-center text-white relative z-10">
-        Access elite software engineers with diverse expertise in 100+ technologies, working in your timezone
-      </p>
-      <div className="relative z-10">
-        <Button
-          // onClick={scrollToGetInTouch}
-          icon={<FaArrowRightLong />}
-          className={'border-white, text-white'}
-        >
-          Schedule Free Consultation
-        </Button>
-      </div>
-    </div>
+          <div className="relative flex flex-col gap-5 md:gap-7 h-[70vh] items-center justify-center">
+            <div
+              className="absolute inset-0 bg-cover bg-center overflow-hidden"
+              style={{ backgroundImage: `url(${landingbg})` }}
+            >
+              <div className="absolute inset-0 bg-blue-950 opacity-40" />
+            </div>
+
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center text-white relative z-10">
+              Be the{" "}
+              <span className="underline underline-offset-8">Trendsetter</span>{" "}
+              in <br className="hidden sm:block" /> Your Digital Space
+            </h1>
+
+            {/* Subheading */}
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl w-[90%] md:w-[80%] text-center text-white relative z-10">
+              Access elite software engineers with diverse expertise in 100+ technologies, working in your timezone
+            </p>
+
+            {/* Button */}
+            <div className="relative z-10">
+              <Button
+                // onClick={scrollToGetInTouch}
+                icon={<FaArrowRightLong />}
+                className={'border-white text-white'}
+              >
+                Schedule Free Consultation
+              </Button>
+            </div>
+          </div>
+
 
 
 
