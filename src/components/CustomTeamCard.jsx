@@ -22,7 +22,7 @@ const CustomTeamCard = React.memo(
             <img
               src={Image}
               alt={name}
-              className="h-full object-cover absolute top-[36%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
+              className="h-full object-cover absolute top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
             />
             <div className="bg-white py-2 px-0 w-full absolute bottom-0 right-0 left-0 text-center shadow-md">
               <p className="text-lg font-semibold text-left pl-5">{name}</p>
