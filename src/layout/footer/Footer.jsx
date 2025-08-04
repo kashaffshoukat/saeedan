@@ -100,8 +100,9 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-white mt-8 py-4">
-        <div className="container mx-auto flex justify-center items-center">
+        <div className="container mx-auto flex justify-between items-center">
           <p>&copy; {new Date().getFullYear()} | All rights reserved</p>
+          <p> <span onClick={() => navigate("/privacy-policy")} className="cursor-pointer hover:text-yellow-400"> Privacy policy </span> | <span onClick={() => navigate('/terms-condition')} className="cursor-pointer hover:text-yellow-400"> Terms and conditions</span></p>
         </div>
 
       </div>

@@ -1,10 +1,17 @@
 import React from 'react';
 import CustomTeamCard from './CustomTeamCard';
-import { ali, amir, anas, daniyal, fida, hamza, haseeb, moaz, mudasser, murtaza, rohan, salam, shahbaz, usama, zubair, pmbg, react, laravel, react2, hamzabg, python, salambg, amirbg, wajidbg, irfan, wajid, newpic, newpic2, bdbg, mehboob, graphic, tahoor, alizulqarnain, aimlbg, ubaid, bddbg, zumra } from '../assets';
+import { ali, amir, anas, daniyal, fida, hamza, haseeb, moaz, mudasser, murtaza, rohan, salam, shahbaz, usama, zubair, pmbg, react, laravel, react2, hamzabg, python, salambg, amirbg, wajidbg, irfan, wajid, newpic, newpic2, bdbg, mehboob, graphic, tahoor, alizulqarnain, aimlbg, ubaid, bddbg, zumra, mehwish } from '../assets';
 
 const AllTeam = () => {
 
     const data = [
+         {
+            image: zumra,
+            name: 'Zumra Majeed',
+            position: 'HR Executive',
+            backgroundColor: "#dd6f65",
+            backgroundImage: "https://t3.ftcdn.net/jpg/04/06/02/96/360_F_406029666_HXoRQoU8ojjpcDiSKRSe34DOF5EIyeP5.jpg"
+        },
         {
             image: rohan,
             name: 'Ruhan Ahmad',
@@ -52,15 +59,6 @@ const AllTeam = () => {
 
         },
         {
-            image: salam,
-            name: 'Abdul Salam',
-            position: 'Flutter Developer',
-            backgroundColor: '#c8cbff',
-            backgroundImage: salambg
-
-        },
-       
-        {
             image: zubair,
             name: 'Muhammad Zubair',
             position: 'React JS Developer',
@@ -79,29 +77,15 @@ const AllTeam = () => {
         {
             image: alizulqarnain,
             name: 'Ali Zulqarnain',
-            position: 'Graphic Designer',
+            position: 'AI/ML Developer',
             backgroundColor: '#021e4b',
             backgroundImage: aimlbg
         },
-         {
-            image: ubaid,
-            name: 'Muhammad Tahoor',
+          {
+            image: mehwish,
+            name: 'Mehwish Shaukat',
             position: 'Business Developer',
-            backgroundColor: "#282828",
-            backgroundImage: bdbg
-        },
-        {
-            image: tahoor,
-            name: 'Ubaid ur rehman',
-            position: 'Business Developer',
-            backgroundColor: "#000000",
-            backgroundImage: bddbg
-        },
-         {
-            image: zumra,
-            name: 'Zumra Majeed',
-            position: 'Hr Executive',
-            backgroundColor: "#000000",
+            backgroundColor: "#666e75",
             backgroundImage: bddbg
         },
         

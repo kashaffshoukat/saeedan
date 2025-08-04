@@ -12,6 +12,8 @@ import Portfolio from "../src/views/Portfolio/index";
 import BlogsDetailsComponent from "./views/Blogs/BlogsDetailsComponent";
 import WebDevelopmentServices from "./views/WebDevelopmentServices/WebDevelopmentServices";
 import GetInTouch from "./components/GetInTouch/GetInTouch";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsCondition from "./components/TermsCondition";
 
 export default function Router() {
   let element = useRoutes([
@@ -55,6 +57,14 @@ export default function Router() {
         {
           path: "/portfolio",
           element: <Portfolio />,
+        },
+         {
+          path: "/privacy-policy",
+          element: <PrivacyPolicy />,
+        },
+         {
+          path: "/terms-condition",
+          element: <TermsCondition />,
         },
       ],
     },

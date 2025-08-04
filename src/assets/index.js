@@ -59,7 +59,8 @@ import alizulqarnain from './alizulqarnain.png'
 import aimlbg from './alimlbg.jpeg'
 import ubaid from './ubaid.png'
 import bddbg from './bddbg.jpg'
-import zumra from './zumra.png'
+import zumra from './zumraa.png'
+import mehwish from './mehwish.png'
 export {
   teampic,
   teamAll,
@@ -120,5 +121,6 @@ export {
   aimlbg,
   ubaid,
   bddbg,
-  zumra
+  zumra,
+  mehwish
 };
