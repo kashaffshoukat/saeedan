@@ -4,7 +4,7 @@ import bgPint from './bg.jpg.png'
 import atif from './atif.png'
 import rohan from './Ruhan.png'
 import pmbg from './pmbg.png'
-import mudasser from './muddaser.png'
+import mudasser from './Muddaser.png'
 import anas from './anas.png'
 import amir from './amirr.png'
 import moaz from './muazz.png'
@@ -123,5 +123,6 @@ export {
   ubaid,
   bddbg,
   zumra,
-  mehwish
+  mehwish,
+  Mudasser
 };
