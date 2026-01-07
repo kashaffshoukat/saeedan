@@ -8,13 +8,13 @@ import mudasser from './Muddaser.png'
 import anas from './anas.png'
 import amir from './amirr.png'
 import moaz from './muazz.png'
-import ali from './ali.png'
+import ali from './Ali.png'
 import salam from './salam.png'
 // import salam from './abdulsalam.png'
 import hamza from './hamzaa.png'
 import daniyal from './daniyall.png'
 import usama from './usama2.png'
-import shahbaz from './shahbazz.png'
+import shahbaz from './Shahbazz.png'
 import zubair from './zubair.png'
 import murtaza from './murtazaa.png'
 // import haseeb from './haseeb.png'
@@ -72,7 +72,7 @@ export {
   anas,
   amir,
   moaz,
-  ali,
+  Ali,
   salam,
   hamza,
   Ruhan,
