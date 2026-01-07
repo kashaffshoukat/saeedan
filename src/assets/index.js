@@ -75,6 +75,7 @@ export {
   ali,
   salam,
   hamza,
+  Ruhan,
   daniyal,
   usama,
   shahbaz,
