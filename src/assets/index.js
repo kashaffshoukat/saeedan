@@ -24,7 +24,7 @@ import react from "./bgusama.png";
 import laravel from "./anasbg.png";
 import react2 from "./moazbg.png";
 import hamzabg from "./hamzabg.png";
-import python from "./python.jpg";
+import python from "./Python.jpg";
 import salambg from "./salambg.png";
 import amirbg from "./amirbg.png";
 import wajidbg from "./wajidbg.png";
