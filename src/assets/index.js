@@ -19,7 +19,7 @@ import zubair from './zubair.png'
 import murtaza from './murtazaa.png'
 // import haseeb from './haseeb.png'
 import haseeb from "./haseebb.png";
-import fida from "./fidaaa.png";
+import fida from "./fida.png";
 import react from "./bgusama.png";
 import laravel from "./anasbg.png";
 import react2 from "./moazbg.png";
